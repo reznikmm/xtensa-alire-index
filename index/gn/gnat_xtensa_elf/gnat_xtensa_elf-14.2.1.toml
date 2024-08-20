@@ -1,0 +1,35 @@
+name = "gnat_xtensa_elf"
+version = "14.2.1"
+provides = ["gnat=14.2.1"]
+description = "The GNAT Ada compiler - xtensa cross-compiler"
+maintainers = ["Max Reznik <reznikmm@gmail.com>"]
+maintainers-logins = ["reznikmm"]
+licenses = "GPL-3.0-or-later AND GPL-3.0-or-later WITH GCC-exception-3.1"
+
+auto-gpr-with = false
+
+[configuration]
+disabled = true
+
+[environment]
+PATH.prepend = "${CRATE_ROOT}/bin"
+
+[origin."case(os)".linux."case(host-arch)".x86-64]
+binary = true
+url = "https://github.com/reznikmm/GNAT-FSF-builds/releases/download/gnat-14.2.0-1/gnat-xtensa-elf-linux64-14.2.0-1.tar.gz"
+hashes = ["sha256:a9a53abad4ce09ee03283ecc4d4352c857994bf8d3174ec2d87c05c12a9c1a64"]
+
+[origin."case(os)".windows."case(host-arch)".x86-64]
+binary = true
+url = "https://github.com/reznikmm/GNAT-FSF-builds/releases/download/gnat-14.2.0-1/gnat-xtensa-elf-windows64-14.2.0-1.tar.gz"
+hashes = ["sha256:5c66c37aa0d2f1b16c2556d494a015d6df1088d4f4848e123eaf5cf0a7a388f8"]
+
+[origin."case(os)".macos."case(host-arch)".x86-64]
+binary = true
+url = "https://github.com/reznikmm/GNAT-FSF-builds/releases/download/gnat-14.2.0-1/gnat-xtensa-elf-darwin-14.2.0-1.tar.gz"
+hashes = ["sha256:2f4c393f44a0328ba0a9b83272e2e70e96e188c20824abdf1d58d9af66c213c3"]
+
+[origin."case(os)".macos."case(host-arch)".aarch64]
+binary = true
+url = "https://github.com/reznikmm/GNAT-FSF-builds/releases/download/gnat-14.2.0-1/gnat-xtensa-elf-aarch64-darwin-14.2.0-1.tar.gz"
+hashes = ["sha256:b204ed51a55ec131a31d463a888df487d57131cef639eaad98a28b0446efd15e"]
